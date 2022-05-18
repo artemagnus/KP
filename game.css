@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: 'Playfair Display SC', serif;
+}
+
+.main {
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #373230;
+}
+
+.mark {
+    display: flex;
+    margin-top: -1%;
+}
+
+.left {
+    width: 65%;
+}
+
+#right {
+    width: 100%;
+}
+
+.elden {
+    margin-top: 120px;
+
+}
+
+#game_header {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.down {
+    color: rgb(211, 211, 211);
+    font-size: 25px;
+    padding: 12px;
+}
+
+#elden_ring {
+    font-size: 50px;
+    text-align: center;
+
+}
+
+.pred_slider {
+    color: rgb(211, 211, 211);
+    padding: 20px;
+    font-size: 25px;
+}
+
+.right {
+    width: 100%;
+}
+.on_main{
+    cursor: pointer;
+
+}
+.on_main:hover{
+    color: #8b8b8b;
+}
+#marks {
+    width: 100%;
+}
+.adaptivn-slayder{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    height: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .adaptivn-slayder, .parag img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+  }
+  
+  .adaptivn-slayder .prev, .adaptivn-slayder .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    transition: 0.6s ease;
+  }
+  .adaptivn-slayder .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .adaptivn-slayder .prev:hover,
+  .adaptivn-slayder .next:hover {
+    background-color: rgba(25, 24, 24, 0.8);
+  }
+  
+ 
+  
+  
+  
+
+
+#photo {
+    width: 100%;
+}
+
+.chert {
+    color: rgb(211, 211, 211);
+    font-size: 25px;
+    padding: 15px;
+
+}
+
+.trailer {
+    color: rgb(211, 211, 211);
+    font-size: 40px;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+.elden_ring_after{
+    display: none;
+}
+.video {
+    width: 100%;
+
+    background-color: black;
+}
+
+#video {
+    height: 600px;
+    width: 100%;
+}
+
+.same {
+    background-color: black;
+}
+
+.podobnoe {
+    width: 100%;
+    text-align: center;
+    color: rgb(211, 211, 211);
+    height: 50px;
+    font-size: 25px;
+}
+
+.samegames {
+    display: flex;
+}
+
+.game_same {
+    width: 33%;
+    color: rgb(211, 211, 211);
+    text-align: center;
+    padding: 10px;
+}
+
+#game_same {
+    width: 100%;
+    box-shadow: 0px 0px 5px 5px #ff000040;
+}
+
+figcaption {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.inputs {
+    width: fit-content;
+    padding: 5px;
+    color: rgb(211, 211, 211);
+    font-size: 30px;
+    padding: 40px;
+}
+@media(max-width:1760px){
+    .elden_ring_after{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        color: rgb(211, 211, 211);
+        font-size: 60px;
+margin-top: 20px;
+    }
+    #elden_ring{
+        display: none;
+    }
+    .down{
+        font-size: 22px;
+    }
+}
+@media(max-width:1554px){
+    .down{
+        font-size: 20px;
+    }
+    .pred_slider{
+        font-size: 20px;
+
+    }
+}
+@media(max-width:1417px){
+    .down{
+        font-size: 18px;
+    }
+    .pred_slider{
+        font-size: 18px;
+
+    }
+    .chert{
+        font-size: 18px;
+
+    }
+    figcaption{
+        font-size: 22px;
+    }
+    .inputs{
+        font-size: 22px;
+    }
+}
+@media(max-width:1300px){
+    .down{
+        font-size: 16px;
+    }
+    .pred_slider{
+        font-size: 16px;
+
+    }
+    .chert{
+        font-size: 16px;
+
+    }
+    figcaption{
+        font-size: 22px;
+    }
+    .inputs{
+        font-size: 22px;
+    }
+}
+@media(max-width:1146px){
+    .down{
+        font-size: 15px;
+    }
+    .pred_slider{
+        font-size: 15px;
+
+    }
+    .chert{
+        font-size: 15px;
+
+    }
+    figcaption{
+        font-size: 22px;
+    }
+    .inputs{
+        font-size: 22px;
+    }
+}
+@media(max-width:1077px){
+    .mark{
+        flex-direction: column-reverse;
+        margin-top: -0.5%;
+    }
+    .up{
+        margin-top: -0.5%;
+    }
+    .left{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .down{
+        font-size: 20px;
+    }
+    .pred_slider{
+        font-size: 20px;
+margin-bottom: 10px;
+    }
+    .chert{
+        font-size: 20px;
+
+    }
+    figcaption{
+        font-size: 22px;
+    }
+    .inputs{
+        font-size: 22px;
+    }
+    .elden{
+        margin-top: 50px;
+    }
+}
+@media(max-width:1000px) {
+  
+    #right_input{
+        width: 80px;
+        height: 80px;
+    }
+    #left_input{
+        width: 80px;
+        height: 80px; 
+    }
+    .trailer{
+        font-size: 25px;
+    }
+}
+@media(max-width:800px){
+    #right_input{
+        width: 60px;
+        height: 60px;
+    }
+    #left_input{
+        width: 60px;
+        height: 60px;
+    }
+    #video{
+        height: 400px;
+    }
+    figcaption{
+        font-size: 18px;
+    }
+    .elden_ring_after{
+        font-size: 40px;
+    }
+}
+@media(max-width:650px){
+    .main{
+        width: 90%;
+    }
+    #right_input{
+        width: 40px;
+        height: 40px;
+    }
+    #left_input{
+        width: 40px;
+        height: 40px; 
+    }
+    .down{
+        font-size: 15px;
+    }
+    .pred_slider{
+        font-size: 15px;
+margin-bottom: 10px;
+    }
+    .chert{
+        font-size: 15px;
+
+    }
+    figcaption{
+        font-size: 15px;
+    }
+    .inputs{
+        font-size: 15px;
+    }
+}
+@media(max-width:500px){
+    .samegames{
+        flex-direction: column;
+        align-items: center;
+    }
+    .game_same{
+        width: 80%;
+    }
+    #video{
+        height: 200px;
+    }
+}

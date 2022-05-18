@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <script src="js.js"></script>
+    
+    <link rel="stylesheet" href="./game.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="elden">
+        </div>
+        <div class="mark">
+            <div class="left"></div>
+            <div class="right">
+                <div class="up">
+                    
+                </div>
+                <div class="down">
+                    <p id="down">
+
+                    </p>
+                    <p id="elden_ring"></p>
+                </div>
+            </div>
+
+        </div>
+        <div class="elden_ring_after"></div>
+        <div class="pred_slider">
+
+        </div>
+
+
+        <div class="slider_main">
+            <div class="adaptivn-slayder">
+                <div id="slide1" class="parag">
+                </div>
+              
+                <div id="slide2" class="parag">
+                </div>
+              
+                <div id="slide3" class="parag">
+                </div>
+              
+                <a class="prev" onclick="minusSlide()">❮</a>
+                <a class="next" onclick="plusSlide()">❯</a>
+              </div>
+              
+              
+            <div class="chert"></div>
+        </div>
+        <div class="video">
+            <div class="trailer">Трейлер игры</div>
+            <div class="videos"> </div>
+
+        </div>
+        <div class="same">
+            <div class="podobnoe">Подобные игры</div>
+            <div class="samegames">
+                <div id="figure1" class="game_same"></div>
+                <div id="figure2" class="game_same"></div>
+                <div id="figure3" class="game_same"></div>
+            </div>
+            <div class="inputs">
+                <p onclick="location.href='main.html'" class="on_main">На главную</p>
+                <p onclick="nextgame()" class="on_main">На следующую</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlide() {
+  showSlides(slideIndex += 1);
+}
+
+function minusSlide() {
+  showSlides(slideIndex -= 1);  
+}
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("parag");
+  if (n > slides.length) {
+  slideIndex = 1
+  }
+  if (n < 1) {
+  slideIndex = slides.length
+  }
+  for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+  }
+ 
+  slides[slideIndex - 1].style.display = "block";
+}
+</script>
+<script>
+    
+    var url = new URLSearchParams(document.location.search);
+    var odin = 1;
+    var ing = url.get("play");
+    function  nextgame(){
+      
+  ing++;
+ 
+  location.href='game.html?play='+ing;
+ if(ing==4){
+    location.href='game.html?play=1';
+ }
+
+}
+    if (ing == 1) {
+        document.getElementsByTagName("body")[0].style.background="url('game_back.jpg')";
+        document.getElementsByTagName("body")[0].style.backgroundRepeat="no-repeat";
+        document.getElementsByTagName("body")[0].style.backgroundAttachment="fixed";
+        document.getElementsByTagName("body")[0].style.backgroundPosition="center center";
+
+
+        let div_elden = document.querySelector(".elden");
+        div_elden.innerHTML = "<img id='game_header' src='" + imgArr1[0].src + "'/>";
+        let div_left = document.querySelector(".left");
+        div_left.innerHTML = "<img id='marks' src='" + imgArr1[1].src + "'/>";
+        let div_right = document.querySelector(".up");
+        div_right.innerHTML = "<img id='marks' src='" + imgArr1[2].src + "'/>";
+        let div_video = document.querySelector(".videos");
+        div_video.innerHTML = "<video id='video' src='" + imgArr1[3].src + "' controls></video>";
+        let div_1 = document.getElementById("figure1");
+        div_1.innerHTML = "<img id='game_same' src='" + imgArr1[4].src + "' />";
+        let div_2 = document.getElementById("figure2");
+        div_2.innerHTML = "<img id='game_same' src='" + imgArr1[5].src + "' />";
+        let div_3 = document.getElementById("figure3");
+        div_3.innerHTML = "<img id='game_same' src='" + imgArr1[6].src + "' />";
+        document.getElementById("down").innerHTML = main[0].right_text;
+        document.getElementById("elden_ring").innerHTML = main[0].header;
+        document.querySelector(".elden_ring_after").innerHTML = main[0].header;
+        document.querySelector(".pred_slider").innerHTML = main[0].podhead_text;
+        document.querySelector(".chert").innerHTML = main[0].podslider_text;
+        let slide1 = document.getElementById("slide1");
+        slide1.innerHTML = "<img id='photo' src='" + imgArr1[7].src + "' />";
+        let slide2 = document.getElementById("slide2");
+        slide2.innerHTML = "<img id='photo' src='" + imgArr1[8].src + "' />";
+        let slide3 = document.getElementById("slide3");
+        slide3.innerHTML = "<img id='photo' src='" + imgArr1[9].src + "' />";
+    }
+    if (ing == 2) {
+        document.getElementsByTagName("body")[0].style.background="url('stalker_background.png')";
+        document.getElementsByTagName("body")[0].style.backgroundRepeat="no-repeat";
+        document.getElementsByTagName("body")[0].style.backgroundAttachment="fixed";
+        document.getElementsByTagName("body")[0].style.backgroundPosition="center center";
+
+        let div_elden = document.querySelector(".elden");
+        div_elden.innerHTML = "<img id='game_header' src='" + imgArr2[0].src + "'/>";
+        let div_left = document.querySelector(".left");
+        div_left.innerHTML = "<img id='marks' src='" + imgArr2[1].src + "'/>";
+        let div_right = document.querySelector(".up");
+        div_right.innerHTML = "<img id='marks' src='" + imgArr2[2].src + "'/>";
+        let div_video = document.querySelector(".videos");
+        div_video.innerHTML = "<video id='video' src='" + imgArr2[3].src + "' controls></video>";
+        let div_1 = document.getElementById("figure1");
+        div_1.innerHTML = "<img id='game_same' src='" + imgArr2[4].src + "' />";
+        let div_2 = document.getElementById("figure2");
+        div_2.innerHTML = "<img id='game_same' src='" + imgArr2[5].src + "' />";
+        let div_3 = document.getElementById("figure3");
+        div_3.innerHTML = "<img id='game_same' src='" + imgArr2[6].src + "' />";
+        document.getElementById("down").innerHTML = main[1].right_text;
+        document.getElementById("elden_ring").innerHTML = main[1].header;
+        document.querySelector(".elden_ring_after").innerHTML = main[1].header;
+        document.querySelector(".pred_slider").innerHTML = main[1].podhead_text;
+        document.querySelector(".chert").innerHTML = main[1].podslider_text;
+        let slide1 = document.getElementById("slide1");
+        slide1.innerHTML = "<img id='photo' src='" + imgArr2[7].src + "' />";
+        let slide2 = document.getElementById("slide2");
+        slide2.innerHTML = "<img id='photo' src='" + imgArr2[8].src + "' />";
+        let slide3 = document.getElementById("slide3");
+        slide3.innerHTML = "<img id='photo' src='" + imgArr2[9].src + "' />";
+
+    }
+    if (ing == 3) {
+        document.getElementsByTagName("body")[0].style.background="url('horizon_background.jpg')";
+        document.getElementsByTagName("body")[0].style.backgroundRepeat="no-repeat";
+        document.getElementsByTagName("body")[0].style.backgroundAttachment="fixed";
+        document.getElementsByTagName("body")[0].style.backgroundPosition="center center";
+        let div_elden = document.querySelector(".elden");
+        div_elden.innerHTML = "<img id='game_header' src='" + imgArr3[0].src + "'/>";
+        let div_left = document.querySelector(".left");
+        div_left.innerHTML = "<img id='marks' src='" + imgArr3[1].src + "'/>";
+        let div_right = document.querySelector(".up");
+        div_right.innerHTML = "<img id='marks' src='" + imgArr3[2].src + "'/>";
+        let div_video = document.querySelector(".videos");
+        div_video.innerHTML = "<video id='video' src='" + imgArr3[3].src + "' controls></video>";
+        let div_1 = document.getElementById("figure1");
+        div_1.innerHTML = "<img id='game_same' src='" + imgArr3[4].src + "' />";
+        let div_2 = document.getElementById("figure2");
+        div_2.innerHTML = "<img id='game_same' src='" + imgArr3[5].src + "' />";
+        let div_3 = document.getElementById("figure3");
+        div_3.innerHTML = "<img id='game_same' src='" + imgArr3[6].src + "' />";
+        document.getElementById("down").innerHTML = main[2].right_text;
+        document.getElementById("elden_ring").innerHTML = main[2].header;
+        document.querySelector(".elden_ring_after").innerHTML = main[2].header;
+        document.querySelector(".pred_slider").innerHTML = main[2].podhead_text;
+        document.querySelector(".chert").innerHTML = main[2].podslider_text;
+        let slide1 = document.getElementById("slide1");
+        slide1.innerHTML = "<img id='photo' src='" + imgArr3[7].src + "' />";
+        let slide2 = document.getElementById("slide2");
+        slide2.innerHTML = "<img id='photo' src='" + imgArr3[8].src + "' />";
+        let slide3 = document.getElementById("slide3");
+        slide3.innerHTML = "<img id='photo' src='" + imgArr3[9].src + "' />";
+
+    }
+</script>
